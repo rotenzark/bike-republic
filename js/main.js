@@ -42,7 +42,7 @@
       ws_s1: 'Check-up e messa a punto stagionale',
       ws_s2: 'Riparazioni con ricambi originali',
       ws_s3: 'Restyling e personalizzazioni',
-      ws_s4: "Le “special” su misura, dalla prima idea all'ultima vite",
+      ws_s4: 'Le "special" su misura, dalla prima idea all\'ultima vite',
       ws_note: "Il menù dell'officina, coi tempi e i prezzi del momento, ve lo diciamo al banco o al telefono.",
       gal_title: '#lifeinbikerepublic',
       gal_sub: 'Bici uscite dal negozio e finite in giro per il mondo — dalle pagine della Repubblica.',
