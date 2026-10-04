@@ -216,9 +216,7 @@ a { color: inherit; }
   align-items: center;
   gap: 1rem;
   padding: .65rem clamp(1rem, 3vw, 1.6rem);
-  background: rgba(245, 241, 234, .93);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  background: rgb(245, 241, 234);
   border-bottom: 1px solid var(--linea);
 }
 
@@ -329,6 +327,25 @@ a { color: inherit; }
   .wordmark { font-size: 1rem; }
   .topbar { gap: .6rem; }
 }
+
+/* telefoni stretti (320–400 px): la testata deve stare nello schermo anche coi caratteri di riserva */
+@media (max-width: 400px) {
+  .topbar { gap: .45rem; padding-left: .8rem; padding-right: .8rem; }
+  .topbar-actions { gap: .35rem; }
+  .nav-toggle { padding: .45rem .6rem; }
+  .nav-toggle [data-i18n="menu"] {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+  }
+  .lang-sep { display: none; }
+  .btn-small { padding: .5rem .8rem; }
+}
+@media (max-width: 340px) {
+  .wordmark { font-size: .9rem; }
+  .lang-btn { padding: .25rem .15rem; }
+}
+/* coi caratteri di riserva (Anton non ancora arrivato) i titoli lunghi vanno a capo invece di allargare la pagina */
+.hero-titolo, .sezione-titolo { overflow-wrap: anywhere; }
 
 /* ---------- hero duotone ---------- */
 
