@@ -728,6 +728,36 @@ a { color: inherit; }
   color: var(--carta);
 }
 
+/* mappa caricata solo al clic (regola privacy della flotta) */
+.mappa-dove {
+  max-width: 900px;
+  margin: 2.6rem auto 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(245, 241, 234, .18);
+}
+.mappa-dove iframe { display: block; width: 100%; height: 380px; border: 0; }
+.mappa-clic {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; min-height: var(--mappa-h, 320px); box-sizing: border-box; padding: 24px; text-align: center;
+  background:
+    repeating-linear-gradient(0deg, rgba(245, 241, 234, .10) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(90deg, rgba(245, 241, 234, .10) 0 1px, transparent 1px 28px),
+    var(--navy);
+  color: var(--carta);
+}
+.mappa-clic__velo { display: flex; flex-direction: column; align-items: center; gap: 12px; max-width: 32em; }
+.mappa-clic__btn {
+  display: inline-block; padding: .75em 1.4em; border: 2px solid currentColor; border-radius: 999px;
+  color: inherit; font: inherit; font-weight: 700; line-height: 1.2; text-decoration: none; background: transparent; cursor: pointer;
+}
+.mappa-clic__btn:hover, .mappa-clic__btn:focus-visible { background: rgba(245, 241, 234, .12); }
+.mappa-clic__nota { margin: 0; font-size: .85em; line-height: 1.45; color: rgba(245, 241, 234, .85); }
+@media (max-width: 760px) {
+  .mappa-dove { max-width: 480px; }
+  .mappa-dove iframe { height: 320px; }
+}
+
 .orari-dove {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
